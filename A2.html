@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+ <!-- Import pure.css -->
+<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    
+<meta charset="UTF-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&family=Roboto&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+<script src="vega_light_vis.js"></script>
+
+<title>International Health And Population Metrics</title>
+<link rel="stylesheet" href="A2.css">
+
+</head>
+
+<body>
+    
+    <div class="Title">
+        <h1>Global Census </h1> 
+    </div>
+
+    
+    <div class = "subtitle">
+
+        <h4>Comparing The Population Density Of The World In 2020</h4>
+    </div>
+    
+   
+
+    <div class="pure-g">
+         <div class="pure-u-2-3">
+          <div id="map" class="vis-container">
+          </div>
+      </div>
+      <div class="pure-u-1-3">
+        <div class="description description-right">
+            <p id = "intext" class="p_map">The map visualization shows the global population density(population /area) in 2020.  The bar near the map shows the intervals of different densities. </p>
+            <p id = "intext" class="p_map">The population density in Australia is 3.11 which is quite low compared to China 149.47 which have a similar area to Australia because the population in China is much greater than in Australia. The population density in Japan arrives at 344.34 because of the huge population and limited land. </p>
+        </div>
+      </div> 
+      
+    </div>
+
+
+
+    <div class = "subtitle">
+        <h4>Birth And Death Rate In Four Countries From 2010 to 2020</h4>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-2-5">
+         <div id="birth_rate_line_chart" class="vis-container">
+          </div>
+        </div>
+    <div class="pure-u-1-5">
+            <div class="description description-right">
+                <p id = "intext" class="p_lie_chart">These lie charts show the death and birth rate in four countries from 2010 to 2020. In the birth rate chart, Australia and China get similar birth rates which are close to 12 at this period.</p>     
+                <p id = "intext" class="p_lie_chart"> And Canada is in the middle get 10, Japan has the lowest birth rate of 8 compare to others. In the death rate chart, Japan has the highest death rate which reaches 10 in 2020, and Australia has the lowest average death rate 7 during the ten years. </p>
+            </div>
+        </div>
+        
+        <div class="pure-u-2-5">
+            <div id="death_rate_line_chart" class="vis-container">
+             </div>
+           </div>
+   </div>
+
+
+
+    <div class="subtitle">
+        <h4>Population Growth rate trend in four countries from 2010 to 2020</h4>
+    </div>
+
+    
+    <div class="pure-g">
+        <div class="pure-u-2-3">
+         <div id="growth_rate_Heat_map" class="vis-container">
+         </div>
+     </div>
+     <div class="pure-u-1-3">
+       <div class="description-right">
+           <p id = "intext" class="p_heat_map">The heat map illustrates the population growth rate trend in four countries from 2010 to 2020. Australia has the highest growth rate because of its low death rate and high birth rate. </p>
+               
+            <p id = "intext" class="p_heat_map">Due to Japan’s high death rate and low birth rate, the growth rate of Japanese is the lowest. Although China has a high birth rate and low death rate, the growth rate is still at a low point the reason might be the huge population before 2010.</p>
+       </div>
+     </div> 
+     
+   </div>
+
+
+
+    <div class = "subtitle">
+        <h4>Average Life Expactancy In Four Countries From 2010 to 2020</h4>
+    </div>
+
+
+    <div class="pure-g">
+        <div class="pure-u-2-3">
+         <div id="Life_Expactancy_bar_chart" class="vis-container">
+         </div>
+     </div>
+     <div class="pure-u-1-3">
+       <div class="description-right">
+           <p id = "intext" class="p_bar_chart">Sex is an important factor affecting life expectancy, as the bar chart illustrates that women generally have a long life expectancy in different countries especially in Japan, the average life expectancy of women is 10 longer than that of men.</p>
+           <p id = "intext" class="p_bar_chart">Also Japanese have the highest life expectancy. Chinese people have the lowest life expectancy compared to other countries.</p>
+       </div>
+     </div> 
+
+
+     <div class = "pure-g">
+         <div class = "pure-u-1-1 samll-font">
+             <p> This visualization made by Zhuolang Li. 
+                 The datasource of this visualization is 
+                 <a href="https://www.kaggle.com/census/international-data/tasks" target="_blank">Global Census From Kaggle</a>.
+        
+         </div>
+
+     </div>
+
+
+    
+
+</body>
+    
+
+    
+</html>

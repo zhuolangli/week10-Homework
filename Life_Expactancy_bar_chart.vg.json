@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Life Expactacy (male and female)",
+  "data": { "url": "https://raw.githubusercontent.com/zhuolangli/practice-ass2/main/LifeExpectancy.csv"},
+  "height": 300,
+
+  "transform": [
+    {"calculate": "datum.sex == 2 ? 'Female' : 'Male'", "as": "Gender"}
+  ],
+  "width": {"step": 80},
+  "mark": "bar",
+  "encoding": {
+    "column": {
+      "field": "country_name", "type": "nominal", "spacing": 40,
+      "header": {"orient": "bottom"}
+    },
+    "y": {
+      "aggregate": "mean", "field": "Average_life_expectancy",
+      "title": "Average Life Expectancy",
+      "axis": {"grid": false}
+    },
+    "x": {
+      "field": "Gender",
+      "axis": null
+    },
+    "color": {
+      "field": "Gender",
+      "scale": {"range": ["#675193", "#ca8861"]}
+    }
+  },
+  "config": {
+    "view": {"stroke": "transparent"},
+    "axis": {"domainWidth": 1}
+  }
+}

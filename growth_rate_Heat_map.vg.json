@@ -1,0 +1,57 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "transform": [{"filter": "datum.symbol !== 'GOOG'"}],
+    "width": "container",
+    "height": 300,
+    "data": {
+      "url": "https://raw.githubusercontent.com/zhuolangli/practice-ass2/main/heat_map.csv"
+    },
+    "mark": "rect",
+    "encoding": {
+      "x": {
+        "timeUnit": "year",
+        "field": "year",
+        "type": "ordinal",
+        "title": "Time",
+        "axis": {
+          "format": "%Y",
+          "labelAngle": 0,
+          "labelOverlap": false,
+          "labelColor": {
+            "condition": {
+              "test": {
+                "timeUnit": "monthdate",
+                "field": "value",
+                "equal": {"month": 1, "date": 1}
+              },
+              "value": "black"
+            },
+            "value": null
+          },
+          "tickColor": {
+            "condition": {
+              "test": {
+                "timeUnit": "year",
+                "field": "value",
+                "equal": {"month": 1, "date": 1}
+              },
+              "value": "black"
+            },
+            "value": null
+          }
+        }
+      },
+      "color": {
+        "aggregate": "mean",
+        "field": "growth_rate",
+        "type": "quantitative",
+        "title": "growth rate"
+      },
+      "y": {
+        "field": "country_name",
+        "type": "nominal",
+        "title": null
+      }
+    }
+  }
+  
